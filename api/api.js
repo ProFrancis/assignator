@@ -9,11 +9,6 @@ const mongo = db.connectBdd()
 // PORT
 const port = 8080
 
-app.get('/availableStudents', async (req,res, next) => {
-    const result = await available(next)
-    res.json(result)
-})
-
 available = async (next) => {
   try{
     const db = await mongo
@@ -25,5 +20,32 @@ available = async (next) => {
     db.close()
   }
 }
+
+app.get('/availableStudents', async (req,res, next) => {
+    const result = await available(next)
+    res.json(result)
+})
+
+
+async function addStudent(element) {
+  try {
+      let db = await mongo;
+      await db.collection("Students").insertOne(element);
+      await db.collection("Available_Students").insertOne(element);
+  } catch (err) {
+      console.log(err);
+  } finally {
+      db.close();
+  }
+};
+
+app.post("/students", function(req, res) {
+  let newStudent = {
+      name: req.body.name
+  }
+  await addStudent(newStudent);
+  res.send();
+});
+
  
 app.listen(port)
