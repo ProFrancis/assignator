@@ -1,0 +1,26 @@
+{
+  "name": "francis_and_maelys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProFrancis/assignator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProFrancis/assignator/issues"
+  },
+  "homepage": "https://github.com/ProFrancis/assignator#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.0",
+    "node-fetch": "^2.6.0"
+  }
+}
