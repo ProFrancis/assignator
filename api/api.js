@@ -32,6 +32,7 @@ app.get('/availableStudents', async (req,res, next) => {
 
 async function addStudent(element) {
   try {
+    console.log("MONGO DB => ", mongo.db)
       let db = await mongo
       console.log("NAME => ", element)
       await db.collection("Students").insertOne(element);
