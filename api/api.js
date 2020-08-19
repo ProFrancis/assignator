@@ -14,7 +14,7 @@ app.get('/availableStudents', async (req,res, next) => {
     res.json(result)
 })
 
-available = async ( next) => {
+available = async (next) => {
   try{
     const db = await mongo
     const result = db.collection('Available_Students').find().toArray()
