@@ -1,0 +1,210 @@
+* {
+	margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+	font-size: 100%;
+  list-style: none;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+*:focus {
+  outline: none;
+}
+// VARIABLES
+$color-white: #F5F5F7;
+$color-violet: #483D8B;
+$color-background-violet: #25233cd6;
+
+body {
+  height: 100vh;
+  color: $color-white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/background.png);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main{
+  padding: 20px;
+  display: flex;
+}
+h1,h2,h3,h4{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+figcaption{
+  color: $color-white;
+}
+
+div, nav{
+  border: 2px solid #d2c2d8;
+}
+
+.icones{
+  width: 40px;
+  object-fit: contain;
+}
+
+header{
+  #contenerNav{
+    nav{
+      width: 80px;
+      padding: 5px;
+      border-radius: 15px;
+      background-color: $color-background-violet;
+    }
+    li{
+      padding: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    img{
+      width: 50px;
+    }
+  }
+}
+
+section{
+  margin: 10px;
+  margin-left: 20px;
+  div{
+    border-radius: 15px;
+    background-color: $color-background-violet;
+  }
+  h1{
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 300;
+    width: 592px;
+  }  
+  h2{
+    padding: 10px;
+    font-size: 21px;
+    margin: 5px 0px;
+  }
+  p{
+    line-height: 24px;
+  }
+  #contener{
+    padding: 15px;
+    margin-top: 25px;
+    img{
+      position: absolute;
+      margin-left: 70px;
+    }
+  }
+  #contenerList{
+    padding: 15px 50px;
+    margin-top: 20px;
+    text-align: center;
+    h3{
+      padding: 10px 30px;
+    }
+    img{
+      position: absolute;
+      margin-left: -230px;
+    }
+  }
+  #showList{
+    padding: 15px;
+    margin-top: 25px;
+  }
+}
+
+#contenerAffiliate{
+  margin-top: 91px;
+  div{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: $color-background-violet;
+  }
+  #firstDiv{
+    width: 300px;
+    display: flex;
+    padding-left: 35px;  
+  }
+  h3{
+    padding: 10px 30px;
+  }
+  #showGroups{
+    width: 566px;
+    margin-top: 25px;
+  }
+}
+
+#sectionForm{
+  padding: 0px;
+  margin: 30px 0px;
+  > div{
+    margin-bottom: 20px;
+  }
+  form{
+    display: flex;
+    width: 325px;
+    flex-direction: column;
+  }
+  input{
+    padding: 5px;
+  }
+  label{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  submit{
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  select{
+    padding: 5px;
+  }
+  #formStudentAdd{
+    transition: all 1.5s;
+    background-color: #4bc998;
+  }
+  #formStudentAdd:hover{
+    transition: all 1.5s;
+    background-color: #359a73;
+  }
+  #formDelete{
+    transition: all 1.5s;
+    background-color: #ff515c;
+  }
+  #formDelete:hover{
+    transition: all 1.5s;
+    background-color: #b74c53;
+  }
+}
+
+#formAssignation{
+  label{
+    text-align: unset;
+    margin-bottom: 10px;
+  }
+  input{
+    margin-bottom: 10px;
+  }
+  submit{
+    padding: 10px;
+    margin-top: 20px;
+  }
+}
+
+#cercle{
+  width: 6px;
+  height: 6px;
+  margin: 5px -12px;
+  position: absolute;
+  border: 1px solid white;
+}
+.cercleActif{
+  transition: all 1.5s;
+  background-color: #6ee09c;
+  transition-property: background-color;
+}

@@ -1,13 +1,16 @@
-const db = require('../libs/mongo')
+const bdd = require('../libs/mongo')
 const express = require('express')
 
 let app = express()
 
 // DB MONGO
-const mongo = db.connectBdd()
+const mongo = bdd.connectBdd()
 
 // PORT
 const port = 8080
+
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 
 available = async (next) => {
   try{
@@ -17,7 +20,7 @@ available = async (next) => {
   }catch (err){
     next(err)
   } finally{
-    db.close()
+    bdd.close()
   }
 }
 
@@ -29,17 +32,18 @@ app.get('/availableStudents', async (req,res, next) => {
 
 async function addStudent(element) {
   try {
-      let db = await mongo;
+      let db = await mongo
+      console.log("NAME => ", element)
       await db.collection("Students").insertOne(element);
       await db.collection("Available_Students").insertOne(element);
   } catch (err) {
       console.log(err);
   } finally {
-      db.close();
+    bdd.close();
   }
 };
 
-app.post("/students", function(req, res) {
+app.post("/students", async function(req, res) {
   let newStudent = {
       name: req.body.name
   }

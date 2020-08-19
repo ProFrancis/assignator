@@ -15,9 +15,7 @@ server.set('view engine', 'ejs');
 server.get("/", async function(req, res) {
     res.status(200);    
     let dataStudents = await fetch("http://localhost:8080/availableStudents");
-    console.log(" DATASTUDENTS", dataStudents)
     dataStudents = await dataStudents.json();
-    console.log("dataStudents => ", dataStudents )
     let students = dataStudents.map((student) => student.name);
     res.render("views/pages/home.ejs", {students: students});
 })
