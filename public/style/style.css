@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  list-style: none;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  color: #F5F5F7;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/background.png);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+figcaption {
+  color: #F5F5F7;
+}
+
+div, nav {
+  border: 2px solid #d2c2d8;
+}
+
+.icones {
+  width: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+header #contenerNav nav {
+  width: 80px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #25233cd6;
+}
+
+header #contenerNav li {
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+header #contenerNav img {
+  width: 50px;
+}
+
+section {
+  margin: 10px;
+  margin-left: 20px;
+}
+
+section div {
+  border-radius: 15px;
+  background-color: #25233cd6;
+}
+
+section h1 {
+  padding: 15px;
+  font-size: 22px;
+  font-weight: 300;
+  width: 592px;
+}
+
+section h2 {
+  padding: 10px;
+  font-size: 21px;
+  margin: 5px 0px;
+}
+
+section p {
+  line-height: 24px;
+}
+
+section #contener {
+  padding: 15px;
+  margin-top: 25px;
+}
+
+section #contener img {
+  position: absolute;
+  margin-left: 70px;
+}
+
+section #contenerList {
+  padding: 15px 50px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+section #contenerList h3 {
+  padding: 10px 30px;
+}
+
+section #contenerList img {
+  position: absolute;
+  margin-left: -230px;
+}
+
+section #showList {
+  padding: 15px;
+  margin-top: 25px;
+}
+
+#contenerAffiliate {
+  margin-top: 91px;
+}
+
+#contenerAffiliate div {
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #25233cd6;
+}
+
+#contenerAffiliate #firstDiv {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 35px;
+}
+
+#contenerAffiliate h3 {
+  padding: 10px 30px;
+}
+
+#contenerAffiliate #showGroups {
+  width: 566px;
+  margin-top: 25px;
+}
+
+#sectionForm {
+  padding: 0px;
+  margin: 30px 0px;
+}
+
+#sectionForm > div {
+  margin-bottom: 20px;
+}
+
+#sectionForm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 325px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#sectionForm input {
+  padding: 5px;
+}
+
+#sectionForm label {
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#sectionForm submit {
+  padding: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#sectionForm select {
+  padding: 5px;
+}
+
+#sectionForm #formStudentAdd {
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  background-color: #4bc998;
+}
+
+#sectionForm #formStudentAdd:hover {
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  background-color: #359a73;
+}
+
+#sectionForm #formDelete {
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  background-color: #ff515c;
+}
+
+#sectionForm #formDelete:hover {
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  background-color: #b74c53;
+}
+
+#formAssignation label {
+  text-align: unset;
+  margin-bottom: 10px;
+}
+
+#formAssignation input {
+  margin-bottom: 10px;
+}
+
+#formAssignation submit {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#cercle {
+  width: 6px;
+  height: 6px;
+  margin: 5px -12px;
+  position: absolute;
+  border: 1px solid white;
+}
+
+.cercleActif {
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  background-color: #6ee09c;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+/*# sourceMappingURL=style.css.map */

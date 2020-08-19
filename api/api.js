@@ -3,38 +3,33 @@ const express = require('express')
 
 let app = express()
 
-// DB MONGO
-const mongo = bdd.connectBdd()
-
 // PORT
 const port = 8080
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-available = async (next) => {
+available = async () => {
   try{
-    const db = await mongo
-    const result = db.collection('Available_Students').find().toArray()
+    const db = await bdd.connectBdd();
+    const result = await db.collection('Available_Students').find().toArray()
     return result
   }catch (err){
-    next(err)
+    // next(err)
   } finally{
     bdd.close()
   }
 }
 
-app.get('/availableStudents', async (req,res, next) => {
-    const result = await available(next)
+app.get('/availableStudents', async (req,res) => {
+    const result = await available()
     res.json(result)
 })
 
 
 async function addStudent(element) {
   try {
-    console.log("MONGO DB => ", mongo.db)
-      let db = await mongo
-      console.log("NAME => ", element)
+      const db = await bdd.connectBdd();
       await db.collection("Students").insertOne(element);
       await db.collection("Available_Students").insertOne(element);
   } catch (err) {
