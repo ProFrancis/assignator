@@ -1,7 +1,7 @@
 const bdd = require('../libs/mongo')
 const express = require('express')
 
-let app = express()
+const app = express()
 
 // PORT
 const port = 8080

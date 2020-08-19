@@ -1,8 +1,8 @@
-var MongoClient = require('mongodb').MongoClient
+const MongoClient = require('mongodb').MongoClient
 
 let client;
-var MONGO_DBNAME = "tech-watch"
-var MONGO_URL = "mongodb://localhost:27017"
+const MONGO_DBNAME = "tech-watch"
+const MONGO_URL = "mongodb://localhost:27017"
 
 connectBdd = async() => {
   try{
