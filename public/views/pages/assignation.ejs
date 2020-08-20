@@ -23,7 +23,7 @@
             <li>
               <a href="/history">
                 <img src="../../img/history.png" alt="History Tech-watch" title="History"/>
-                <div id="cercle" class="cercleActif"></div>
+                <div id="cercle"></div>
                 <figcaption>History</figcaption>
               </a>
             </li>
@@ -37,7 +37,7 @@
             <li>
               <a href="/assignation">
                 <img src="../../img/teamwork.png" alt="Stuldent listTech-watch Assignation" title="Assignation"/>
-                <div id="cercle"></div>
+                <div id="cercle" class="cercleActif"></div>
                 <figcaption>Assign</figcaption>
               </a>
             </li>
@@ -49,6 +49,35 @@
       <div id="contenerH1">
         <h1>My Tech watch Assignator</h1>
       </div>
+      <div id="contenerList">
+        <img style="margin-left: -140px;" class="icones" src="../../img/teamwork (1).png" alt="History Tech-watch" />
+        <h3>Students affiliate</h3>
+      </div>
+      <div id="showList">
+        <p>Group...</p>
+      </div>
+    </section>
+    <section id="contenerAffiliate">
+      <div id="firstDiv">
+          <img class="icones" src="../../img/teamwork (1).png" alt="History Tech-watch" />
+          <h3>Add tech-watch</h3>
+      </div>
+      <section id="sectionForm">
+        <div>
+          <form id="formAssignation">
+            <label>Subject</label>
+            <input name="student" placeholder="Subject"/>
+            <label>Deadline</label>
+            <input name="student" placeholder="Deadline"/>
+            <label>Select number</label>
+            <select>
+              <option>Select number</option>
+              <option>0</option>
+            </select>
+            <submit id="formStudentAdd">Create Tech-watch</submit>
+          </form>
+        </div>
+      </section>
     </section>
   </main>
 </body>

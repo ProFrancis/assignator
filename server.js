@@ -20,4 +20,20 @@ server.get("/", async function(req, res) {
     res.render("views/pages/home.ejs", {students: students});
 })
 
+server.get("/student", async (req, res, next) => {
+  res.render("views/pages/student")
+})
+
+server.get("/history", async (req, res, next) => {
+  res.render("views/pages/history")
+})
+
+server.get("/assignation", async (req, res, next) => {
+  res.render("views/pages/assignation")
+})
+
+server.all("*", (req, res) => {
+  return res.send('Page not found');
+});
+
 server.listen(port)
