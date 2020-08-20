@@ -48,15 +48,54 @@ server.post("/deleteStudents", async function(req, res) {
 })
 
 server.get("/history", async (req, res, next) => {
-  res.render("views/pages/history")
+    res.status(200);
+    let nextProjects = await getNextProjects();
+    let previousProjects = await getPreviousProjects();
+    res.render("views/pages/history", {nextProjects: nextProjects, previousProjects: previousProjects})
 })
 
 server.get("/assignation", async (req, res, next) => {
-  res.render("views/pages/assignation")
+    res.status(200);
+    let projects = await getNextProjects();
+    res.render("views/pages/assignation", {projects: projects, error: null})
+})
+
+server.post("/projects", async function(req, res) {
+    res.status(200);
+    let students = await fetch ("http://localhost:8080/students");
+    students = await students.json();
+    if (students.length >= parseInt(req.body.number)) {
+        let objet = {
+            subject: req.body.subject,
+            deadline: req.body.deadline,
+            number: req.body.number
+        }
+        await fetch("http://localhost:8080/projects", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(objet)});
+        res.redirect("/assignation");
+    } else {
+        let projects = await getNextProjects();
+        res.render("views/pages/assignation", {projects: projects, error: "Not enough students"})
+    }   
 })
 
 server.all("*", (req, res) => {
   return res.send('Page not found');
 });
+
+async function getPreviousProjects() {
+    let dataProjects = await fetch("http://localhost:8080/projects");
+    let projects = await dataProjects.json();
+    let previous = projects.filter((project) => Date.parse(project.deadline) < Date.now());
+    previous = previous.sort((a, b) => Date.parse(a.deadline) - Date.parse(b.deadline));
+    return previous;
+}
+
+async function getNextProjects() {
+    let dataProjects = await fetch("http://localhost:8080/projects");
+    let projects = await dataProjects.json();
+    let next = projects.filter((project) => Date.parse(project.deadline) >= Date.now());
+    next = next.sort((a, b) => Date.parse(a.deadline) - Date.parse(b.deadline));
+    return next;
+}
 
 server.listen(port)
