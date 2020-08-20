@@ -117,7 +117,7 @@ async function createGroup(number) {
   let group = [];
   
   for (let i = 0; i < number; i++) {
-      let data = await getAvailableStudents();
+      let data = await available();
       let students = data.map((student) => student.name);
       let index = Math.floor((Math.random()) * students.length);
       let randomStudent = students[index];

@@ -64,13 +64,13 @@
       </div>
       <section id="sectionForm">
         <div>
-          <form id="formAssignation">
+          <form method="POST" action="/projects" id="formAssignation">
             <label>Subject</label>
-            <input name="subject" placeholder="Subject"/>
+            <input name="subject" required placeholder="Subject"/>
             <label>Deadline</label>
-            <input type="date" name="deadline" placeholder="Deadline"/>
+            <input type="date" name="deadline" required placeholder="Deadline"/>
             <label>Select number</label>
-            <input type="text" name="number" >
+            <input type="text" required name="number" >
             <button id="formStudentAdd">Create Tech-watch</button>
           </form>
         </div>
