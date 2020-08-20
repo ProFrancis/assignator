@@ -49,7 +49,7 @@ api.post("/students", async function(req, res) {
 
 async function getStudents() {
   try {
-      let db = await bdd.connectBdd();
+      const db = await bdd.connectBdd();
       const results = await db.collection("Students").find().toArray();
       return results
   } catch (err) {
