@@ -28,6 +28,15 @@ server.get("/student", async (req, res, next) => {
     res.render("views/pages/student.ejs", {students: students})
 })
 
+server.post("/students", async function(req, res) {
+    res.status(200);
+    let objet = {
+        name: req.body.name
+    }
+    await fetch("http://localhost:8080/students", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(objet)});
+    res.redirect("/student");
+})
+
 server.get("/history", async (req, res, next) => {
   res.render("views/pages/history")
 })
