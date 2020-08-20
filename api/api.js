@@ -9,20 +9,20 @@ const port = 8080
 appi.use(express.urlencoded({extended: true}));
 appi.use(express.json());
 
-available = async (next) => {
+available = async () => {
   try{
     const db = await bdd.connectBdd();
     const result = await db.collection('Available_Students').find().toArray()
     return result
   }catch (err){
-    next(err)
-  } finally{
+    console.log(err) 
+ } finally{
     bdd.close()
   }
 }
 
 appi.get('/availableStudents', async (req,res) => {
-    const result = await available(next)
+    const result = await available()
     res.json(result)
 })
 
