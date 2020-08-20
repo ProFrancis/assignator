@@ -132,6 +132,23 @@ section{
   #showGroups{
     width: 566px;
     margin-top: 25px;
+    > div {
+      margin-bottom: 10px;
+    }
+    > div > div, > div > div > div{
+      padding: 0px;
+      border-radius: 0px;
+      border: none;
+    }
+    > div > div {
+      display: flex;
+      justify-content: space-between;
+    }
+    .titleProject{
+      display: flex;
+      margin-bottom: 15px;
+      justify-content: center;
+    }
   }
 }
 

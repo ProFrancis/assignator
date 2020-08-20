@@ -80,10 +80,11 @@
       <div id="showGroups">
         <% for (let project of projects) { %>
           <div>
-            <%= project.subject %>
-            <%= project.deadline %>
-            <%= project.group.join(" - ") %>
-
+            <div class="titleProject"><%= project.subject %></div>
+            <div>
+              <div><%= project.group.join(" - ") %></div>
+              <div><span>When : </span><%= project.deadline %></div>
+            </div>
           </div>
         <%}%>
       </div>

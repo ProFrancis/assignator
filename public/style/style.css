@@ -150,6 +150,35 @@ section #showList {
   margin-top: 25px;
 }
 
+#contenerAffiliate #showGroups > div {
+  margin-bottom: 10px;
+}
+
+#contenerAffiliate #showGroups > div > div, #contenerAffiliate #showGroups > div > div > div {
+  padding: 0px;
+  border-radius: 0px;
+  border: none;
+}
+
+#contenerAffiliate #showGroups > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contenerAffiliate #showGroups .titleProject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 #sectionForm {
   padding: 0px;
   margin: 30px 0px;
