@@ -245,4 +245,25 @@ section #showList {
   -webkit-transition-property: background-color;
   transition-property: background-color;
 }
+
+#pompompurin {
+  width: 120px;
+  position: absolute;
+  -webkit-transform: translateY(-96px);
+          transform: translateY(-96px);
+}
+
+#pompompurinHello {
+  width: 120px;
+  position: absolute;
+  -webkit-transform: translateY(-85px);
+          transform: translateY(-85px);
+}
+
+#pompompurinTurn {
+  width: 120px;
+  position: absolute;
+  -webkit-transform: translateY(-91px);
+          transform: translateY(-91px);
+}
 /*# sourceMappingURL=style.css.map */
