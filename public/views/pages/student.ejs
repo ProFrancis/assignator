@@ -75,11 +75,13 @@ kk<!doctype html>
           </form>
         </div>
         <div>
-          <form>
+          <form method="POST" action="/deleteStudents">
             <label>Delete</label>
-            <select>
-              <option>Select Student </option>
-              <option>Francis</option>
+            <select name="name">
+              <option>Select Student</option>
+              <% for (let student of students) { %>
+                <option value="<%= student %>"><%= student %></option>
+              <%}%>
             </select>
             <button id="formDelete">delete</button>
           </form>
