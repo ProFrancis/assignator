@@ -1,13 +1,13 @@
 const bdd = require('../libs/mongo')
 const express = require('express')
 
-const appi = express()
+const api = express()
 
 // PORT
 const port = 8080
 
-appi.use(express.urlencoded({extended: true}));
-appi.use(express.json());
+api.use(express.urlencoded({extended: true}));
+api.use(express.json());
 
 available = async () => {
   try{
@@ -21,7 +21,7 @@ available = async () => {
   }
 }
 
-appi.get('/availableStudents', async (req,res) => {
+api.get('/availableStudents', async (req,res) => {
     const result = await available()
     res.json(result)
 })
@@ -39,7 +39,7 @@ async function addStudent(element) {
   }
 };
 
-appi.post("/students", async function(req, res) {
+api.post("/students", async function(req, res) {
   let newStudent = {
       name: req.body.name
   }
@@ -59,10 +59,26 @@ async function getStudents() {
   }
 }
 
-appi.get("/students", async function(req, res) {
+api.get("/students", async function(req, res) {
   let students = await getStudents();
   res.json(students);
 })
 
+async function deleteStudent(element) {
+  try {
+      let db = await bdd.connectBdd();
+      await db.collection("Students").deleteOne({name: element});
+      await db.collection("Available_Students").deleteOne({name: element});
+  } catch (err) {
+      console.log(err);
+  } finally {
+      bdd.close();
+  }
+}
+
+api.delete("/students", function(req, res) {
+  deleteStudent(req.body.name);
+  res.send();
+})
  
-appi.listen(port)
+api.listen(port)

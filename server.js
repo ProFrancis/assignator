@@ -38,6 +38,15 @@ server.post("/students", async function(req, res) {
     res.redirect("/student");
 })
 
+server.post("/deleteStudents", async function(req, res) {
+    res.status(200);
+    let objet = {
+        name: req.body.name
+    }
+    await fetch("http://localhost:8080/students", {method: "DELETE", headers: {"Content-Type": "application/json"}, body: JSON.stringify(objet)});
+    res.redirect("/student");
+})
+
 server.get("/history", async (req, res, next) => {
   res.render("views/pages/history")
 })
