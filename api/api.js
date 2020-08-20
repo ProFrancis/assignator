@@ -50,12 +50,14 @@ api.post("/students", async function(req, res) {
 async function getStudents() {
   try {
       let db = await bdd.connectBdd();
-      let results = await db.collection("Students").find().toArray();
-      return results;
+      let results = await db.collection("Students").find().toArray();      
   } catch (err) {
       console.log(err);
   } finally {
+  
     bdd.close();
+    console.log("test")
+    return results;
   }
 }
 
