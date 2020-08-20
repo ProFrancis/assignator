@@ -60,13 +60,18 @@
         </p>
       </div>
       <div id="contenerList">
-        <img class="icones" src="/img/test.png" alt="History Tech-watch" />
+        <img class="icones" src="/img/list1.png" alt="History Tech-watch" />
         <h3>List of available students</h3>
       </div>
       <div id="showList">
         <ul>
           <% for (let student of students) { %>
-              <li><%= student %></li>
+            <% if(student.length > 0) { %> 
+              <li>
+                <img src="/img/student3.png">
+                  <p><%= student %></p>
+                 <% } %> 
+              </li>
           <%}%>
       </ul>
       </div>
@@ -74,7 +79,7 @@
     <section id="contenerAffiliate">
       <img id="pompompurinHello" src="/gifs/hello.gif" alt="gif hello" />
       <div id="firstDiv">
-        <img class="icones" src="/img/teamwork (1).png" alt="History Tech-watch" />
+        <img class="icones" src="/img/team1.png" alt="History Tech-watch" />
         <h3>The two next projects</h3>
       </div>
       <div id="showGroups">
@@ -82,8 +87,11 @@
           <div>
             <div class="titleProject"><%= project.subject %></div>
             <div>
-              <div><%= project.group.join(" - ") %></div>
-              <div><span>When : </span><%= project.deadline %></div>
+              <div>
+                <img src="/img/colleagues.png"> 
+                <p><%= project.group.join(" - ") %></p>
+              </div>
+              <div><p class="date">When : <%= project.deadline %></p></div>
             </div>
           </div>
         <%}%>

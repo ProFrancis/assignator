@@ -18,6 +18,7 @@ $color-background-violet: #25233cd6;
 
 body {
   height: 100vh;
+  font-size: 1em;
   color: $color-white;
   background-size: cover;
   background-position: center;
@@ -33,6 +34,10 @@ main{
 h1,h2,h3,h4{
   text-align: center;
   text-transform: uppercase;
+}
+
+#contenerH1{
+  text-align: center;
 }
 
 figcaption, button{
@@ -93,7 +98,7 @@ section{
     margin-top: 25px;
     img{
       position: absolute;
-      margin-left: 70px;
+      margin-left: 90px;
     }
   }
   #contenerList{
@@ -105,12 +110,27 @@ section{
     }
     img{
       position: absolute;
-      margin-left: -230px;
+      margin-left: -170px;
     }
   }
   #showList{
-    padding: 15px;
+    padding: 15px 15px 5px 20px;
     margin-top: 25px;
+    li::first-letter{
+      text-transform: uppercase;
+    }
+    img{
+      width: 30px;
+      height: 30px;
+      position: absolute;
+    }
+    p{
+      padding-top: 5px;
+      margin-left: 2.5rem;
+    }
+    li{
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -122,16 +142,30 @@ section{
     background-color: $color-background-violet;
   }
   #firstDiv{
-    width: 300px;
+    width: 255px;
     display: flex;
-    padding-left: 35px;  
+    padding-left: 15px;  
   }
   h3{
-    padding: 10px 30px;
+    padding: 15px 0px 0px 10px;
   }
   #showGroups{
+    border: none;
     width: 566px;
-    margin-top: 25px;
+    padding-left: 0px;
+    background-color: #ffffff00;
+    img {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      transform: translate(0px, -25px);
+    }
+    p{
+      margin-left: 3.5rem;
+    }
+    .date{
+      margin: 0px;
+    }
     > div {
       margin-bottom: 10px;
     }
@@ -139,10 +173,14 @@ section{
       padding: 0px;
       border-radius: 0px;
       border: none;
+      background-color: #ffffff00;
     }
     > div > div {
-      display: flex;
-      justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
+    }
+    p::first-letter { 
+      text-transform: uppercase;
     }
     .titleProject{
       display: flex;
