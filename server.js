@@ -83,11 +83,24 @@ server.all("*", (req, res) => {
   return res.send('Page not found');
 });
 
+function convertDate(date) {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const day = days[date.getDay()];
+    const number = date.getDate();
+    const month = months[date.getMonth()];
+    const convertedDate = day + " " + number + " " + month
+    return convertedDate
+}
+
 async function getPreviousProjects() {
     let dataProjects = await fetch("http://localhost:8080/projects");
     let projects = await dataProjects.json();
     let previous = projects.filter((project) => Date.parse(project.deadline) < Date.now());
     previous = previous.sort((a, b) => Date.parse(a.deadline) - Date.parse(b.deadline));
+    for (let project of previous) {
+        project.deadline = convertDate(new Date(project.deadline));
+    }
     return previous;
 }
 
@@ -96,6 +109,9 @@ async function getNextProjects() {
     let projects = await dataProjects.json();
     let next = projects.filter((project) => Date.parse(project.deadline) >= Date.now());
     next = next.sort((a, b) => Date.parse(a.deadline) - Date.parse(b.deadline));
+    for (let project of next) {
+        project.deadline = convertDate(new Date(project.deadline));
+    }
     return next;
 }
 
