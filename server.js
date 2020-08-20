@@ -35,7 +35,6 @@ server.post("/students", async function(req, res) {
     let objet = {
         name: req.body.name
     }
-    console.log("POST SERVER STUDENTS")
     await fetch("http://localhost:8080/students", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(objet)});
     res.redirect("/student");
 })
