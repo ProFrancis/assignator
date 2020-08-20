@@ -54,7 +54,11 @@
         <h3>Students affiliate</h3>
       </div>
       <div id="showList">
-        <p>Group...</p>
+        <% for (let project of projects) { %>
+          <%= project.subject %>
+          <%= project.deadline %>
+          <%= project.group.join(" - ") %>
+        <%}%>
       </div>
     </section>
     <section id="contenerAffiliate">

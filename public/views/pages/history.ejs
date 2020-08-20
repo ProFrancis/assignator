@@ -50,6 +50,22 @@
         <h1>My Tech watch Assignator</h1>
       </div>
     </section>
+    <section>
+      <% for (let project of nextProjects) { %>
+        <div>
+          <%= project.subject %>
+          <%= project.deadline %>
+          <%= project.group.join(" - ") %>
+        </div>
+      <%}%>
+      <% for (let project of previousProjects) { %>
+        <div> 
+          <%= project.subject %>
+          <%= project.deadline %>
+          <%= project.group.join(" - ") %>
+        </div>
+      <%}%>
+    </section>
   </main>
 </body>
 </html>

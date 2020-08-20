@@ -77,7 +77,14 @@
         <h3>The two next projects</h3>
       </div>
       <div id="showGroups">
-        <p>Groups...</p>
+        <% for (let project of projects) { %>
+          <div>
+            <%= project.subject %>
+            <%= project.deadline %>
+            <%= project.group.join(" - ") %>
+
+          </div>
+        <%}%>
       </div>
     </section>
   </main>

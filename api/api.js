@@ -99,7 +99,7 @@ async function deleteFromAvailableStudents(element) {
   try {
       const db = await bdd.connectBdd();
       await db.collection("Available_Students").deleteOne({name: element});
-      let availableStudents = await getAvailableStudents();
+      let availableStudents = await available();
       if (!availableStudents.length) {
         await refillAvailableStudents();
       }
