@@ -47,11 +47,11 @@ kk<!doctype html>
     </header>
     <section>
       <div id="contenerH1">
-        <h1>My Tech watch Assignator</h1>
+        <h1>Tech watch Assignator</h1>
       </div>
       <div id="contenerList">
         <img class="icones" src="../../img/test.png" alt="History Tech-watch" />
-        <h3>List of students TECH-WATCH SOON</h3>
+        <h3>List of students</h3>
       </div>
       <div id="showList">
         <ul>
@@ -69,21 +69,21 @@ kk<!doctype html>
       <section id="sectionForm">
         <div>
           <form method="POST" action="/students">
-            <label>Ajouter</label>
+            <label>Add a student</label>
             <input name="name" required placeholder="Name"/>
-            <button id="formStudentAdd">Ajouter</button>
+            <button id="formStudentAdd">Add</button>
           </form>
         </div>
         <div>
           <form method="POST" action="/deleteStudents">
-            <label>Delete</label>
+            <label>Delete a student</label>
             <select name="name">
               <option>Select Student</option>
               <% for (let student of students) { %>
                 <option value="<%= student %>"><%= student %></option>
               <%}%>
             </select>
-            <button id="formDelete">delete</button>
+            <button id="formDelete">Delete</button>
           </form>
         </div>
       </section>

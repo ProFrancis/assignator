@@ -47,10 +47,11 @@
     </header>
     <section>
       <div id="contenerH1">
-        <h1>My Tech watch Assignator</h1>
+        <h1>Tech watch Assignator</h1>
       </div>
     </section>
     <section>
+      <h2>Next Projects</h2>
       <% for (let project of nextProjects) { %>
         <div>
           <%= project.subject %>
@@ -58,6 +59,8 @@
           <%= project.group.join(" - ") %>
         </div>
       <%}%>
+
+      <h2>Previous Projects</h2>
       <% for (let project of previousProjects) { %>
         <div> 
           <%= project.subject %>
