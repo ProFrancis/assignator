@@ -35,7 +35,7 @@ h1,h2,h3,h4{
   text-transform: uppercase;
 }
 
-figcaption{
+figcaption, button{
   color: $color-white;
 }
 
@@ -154,7 +154,7 @@ section{
     margin-bottom: 20px;
     text-transform: uppercase;
   }
-  submit{
+  button{
     padding: 5px;
     margin-top: 10px;
     cursor: pointer;

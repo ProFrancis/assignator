@@ -35,7 +35,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
-figcaption {
+figcaption, button {
   color: #F5F5F7;
 }
 
@@ -180,7 +180,7 @@ section #showList {
   text-transform: uppercase;
 }
 
-#sectionForm submit {
+#sectionForm button {
   padding: 5px;
   margin-top: 10px;
   cursor: pointer;
@@ -225,7 +225,7 @@ section #showList {
   margin-bottom: 10px;
 }
 
-#formAssignation submit {
+#formAssignation button {
   padding: 10px;
   margin-top: 20px;
 }
