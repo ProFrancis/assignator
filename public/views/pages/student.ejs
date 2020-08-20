@@ -54,7 +54,11 @@ kk<!doctype html>
         <h3>List of students TECH-WATCH SOON</h3>
       </div>
       <div id="showList">
-        <p>List...</p>
+        <ul>
+          <% for (let student of students) { %>
+            <li><%= student %></li>
+          <%}%>
+        </ul>
       </div>
     </section>
     <section id="contenerAffiliate">
@@ -64,7 +68,7 @@ kk<!doctype html>
       </div>
       <section id="sectionForm">
         <div>
-          <form>
+          <form method="POST" action="">
             <label>Ajouter</label>
             <input name="student" placeholder="Name"/>
             <submit id="formStudentAdd">Ajouter</submit>
