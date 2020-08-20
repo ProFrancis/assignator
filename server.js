@@ -14,10 +14,12 @@ server.set('view engine', 'ejs');
 
 server.get("/", async function(req, res) {
     res.status(200);    
+    let projects = await getNextProjects();
+    projects = projects.slice(0, 2);
     let dataStudents = await fetch("http://localhost:8080/availableStudents");
     dataStudents = await dataStudents.json();
     let students = dataStudents.map((student) => student.name);
-    res.render("views/pages/home.ejs", {students: students});
+    res.render("views/pages/home.ejs", {students: students, projects: projects});
 })
 
 server.get("/student", async (req, res, next) => {
