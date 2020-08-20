@@ -21,7 +21,11 @@ server.get("/", async function(req, res) {
 })
 
 server.get("/student", async (req, res, next) => {
-  res.render("views/pages/student")
+    res.status(200);
+    let data = await fetch("http://localhost:8080/students");
+    data = await data.json();
+    let students = data.map((student) => student.name);
+    res.render("views/pages/student.ejs", {students: students})
 })
 
 server.get("/history", async (req, res, next) => {
