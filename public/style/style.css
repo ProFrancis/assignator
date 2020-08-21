@@ -15,6 +15,7 @@
 
 body {
   height: 100vh;
+  font-size: 1em;
   color: #F5F5F7;
   background-size: cover;
   background-position: center;
@@ -33,6 +34,10 @@ main {
 h1, h2, h3, h4 {
   text-align: center;
   text-transform: uppercase;
+}
+
+#contenerH1 {
+  text-align: center;
 }
 
 figcaption, button {
@@ -100,7 +105,7 @@ section #contener {
 
 section #contener img {
   position: absolute;
-  margin-left: 70px;
+  margin-left: 90px;
 }
 
 section #contenerList {
@@ -115,12 +120,31 @@ section #contenerList h3 {
 
 section #contenerList img {
   position: absolute;
-  margin-left: -230px;
+  margin-left: -170px;
 }
 
 section #showList {
-  padding: 15px;
+  padding: 15px 15px 5px 20px;
   margin-top: 25px;
+}
+
+section #showList li::first-letter {
+  text-transform: uppercase;
+}
+
+section #showList img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+section #showList p {
+  padding-top: 5px;
+  margin-left: 2.5rem;
+}
+
+section #showList li {
+  margin-bottom: 15px;
 }
 
 #contenerAffiliate {
@@ -134,20 +158,38 @@ section #showList {
 }
 
 #contenerAffiliate #firstDiv {
-  width: 300px;
+  width: 255px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 35px;
+  padding-left: 15px;
 }
 
 #contenerAffiliate h3 {
-  padding: 10px 30px;
+  padding: 15px 0px 0px 10px;
 }
 
 #contenerAffiliate #showGroups {
+  border: none;
   width: 566px;
-  margin-top: 25px;
+  padding-left: 0px;
+  background-color: #ffffff00;
+}
+
+#contenerAffiliate #showGroups img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  -webkit-transform: translate(0px, -25px);
+          transform: translate(0px, -25px);
+}
+
+#contenerAffiliate #showGroups p {
+  margin-left: 3.5rem;
+}
+
+#contenerAffiliate #showGroups .date {
+  margin: 0px;
 }
 
 #contenerAffiliate #showGroups > div {
@@ -158,6 +200,7 @@ section #showList {
   padding: 0px;
   border-radius: 0px;
   border: none;
+  background-color: #ffffff00;
 }
 
 #contenerAffiliate #showGroups > div > div {
@@ -167,6 +210,10 @@ section #showList {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+#contenerAffiliate #showGroups p::first-letter {
+  text-transform: uppercase;
 }
 
 #contenerAffiliate #showGroups .titleProject {
