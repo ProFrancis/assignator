@@ -76,6 +76,10 @@ div, nav {
   width: 40rem;
 }
 
+.nameProject {
+  font-size: 1.2em;
+}
+
 header #contenerNav nav {
   width: 80px;
   padding: 5px;
