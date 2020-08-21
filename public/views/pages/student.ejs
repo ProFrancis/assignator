@@ -50,13 +50,18 @@
         <h1>Tech watch Assignator</h1>
       </div>
       <div id="contenerList">
-        <img class="icones" src="../../img/test.png" alt="History Tech-watch" />
+        <img id="iconeList" class="icones" src="../../img/list3.png" alt="History Tech-watch" />
         <h3>List of students</h3>
       </div>
       <div id="showList">
         <ul>
           <% for (let student of students) { %>
-            <li><%= student %></li>
+            <% if(student.length > 0) { %> 
+              <li>
+                <img src="/img/student3.png">
+                  <p><%= student %></p>
+                 <% } %> 
+              </li>
           <%}%>
         </ul>
       </div>

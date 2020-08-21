@@ -53,6 +53,11 @@ div, nav {
      object-fit: contain;
 }
 
+.iconeList2 {
+  -webkit-transform: translate(0px, -5px);
+          transform: translate(0px, -5px);
+}
+
 .titleH1 {
   width: 40rem;
 }
@@ -141,17 +146,18 @@ section p {
 }
 
 section #contener {
+  width: 32rem;
   padding: 15px;
   margin-top: 25px;
 }
 
 section #contener img {
   position: absolute;
-  margin-left: 90px;
+  -webkit-transform: translate(35px, 0px);
+          transform: translate(35px, 0px);
 }
 
 section #contenerList {
-  width: 32rem;
   margin-top: 20px;
   padding: 15px 50px;
   text-align: center;
@@ -159,6 +165,11 @@ section #contenerList {
 
 section #contenerList h3 {
   padding: 10px 30px;
+}
+
+section #contenerList #iconeList {
+  -webkit-transform: translate(25px, -5px);
+          transform: translate(25px, -5px);
 }
 
 section #contenerList img {
@@ -169,6 +180,7 @@ section #contenerList img {
 section #showList {
   padding: 15px 15px 5px 20px;
   margin-top: 25px;
+  width: 32rem;
 }
 
 section #showList li::first-letter {
