@@ -49,26 +49,31 @@
       <div id="contenerH1">
         <h1>Tech watch Assignator</h1>
       </div>
-    </section>
-    <section>
-      <img id="pompompurinTurn" src="/gifs/oust_2.gif" alt="gif oust">
-      <h2>Next Projects</h2>
-      <% for (let project of nextProjects) { %>
+      <div id="contenerHistory">
         <div>
-          <%= project.subject %>
-          <%= project.deadline %>
-          <%= project.group.join(" - ") %>
+          <img id="pompompurinTurn" src="/gifs/oust_2.gif" alt="gif oust">
+          <h2>Next Projects</h2>
+            <% for (let project of nextProjects) { %>
+              <div>
+                <%= project.subject %>
+                <%= project.deadline %>
+                <%= project.group.join(" - ") %>
+              </div>
+            <%}%>
         </div>
-      <%}%>
 
-      <h2>Previous Projects</h2>
-      <% for (let project of previousProjects) { %>
-        <div> 
-          <%= project.subject %>
-          <%= project.deadline %>
-          <%= project.group.join(" - ") %>
+        <div>
+          <h2>Previous Projects</h2>
+          <% for (let project of previousProjects) { %>
+            <div> 
+              <%= project.subject %>
+              <%= project.deadline %>
+              <%= project.group.join(" - ") %>
+            </div>
+          <%}%>
         </div>
-      <%}%>
+      </div>
+
     </section>
   </main>
 </body>
