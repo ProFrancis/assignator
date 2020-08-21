@@ -30,6 +30,20 @@ main {
   display: flex;
 }
 
+h1 {
+  padding: 15px;
+  font-size: 1.5em;
+}
+
+h2, h3, h4 {
+  font-size: 1.2em;
+}
+
+h2 {
+  padding: 10px;
+  margin: 5px 0px;
+}
+
 h1, h2, h3, h4 {
   text-align: center;
   text-transform: uppercase;
@@ -54,8 +68,8 @@ div, nav {
 }
 
 .iconeList2 {
-  -webkit-transform: translate(0px, -5px);
-          transform: translate(0px, -5px);
+  -webkit-transform: translate(-25px, -5px);
+          transform: translate(-25px, -5px);
 }
 
 .titleH1 {
@@ -127,18 +141,6 @@ section .showProject .groupProject .showUserGroup, section .showProject .groupPr
 section div {
   border-radius: 15px;
   background-color: #25233cd6;
-}
-
-section h1 {
-  padding: 15px;
-  font-size: 22px;
-  font-weight: 300;
-}
-
-section h2 {
-  padding: 10px;
-  font-size: 21px;
-  margin: 5px 0px;
 }
 
 section p {
@@ -334,8 +336,8 @@ section #showList li {
 }
 
 #contenerAffiliate #firstDiv img {
-  -webkit-transform: translate(-10px, 0px);
-          transform: translate(-10px, 0px);
+  -webkit-transform: translate(-10px, -3px);
+          transform: translate(-10px, -3px);
 }
 
 #sectionForm {

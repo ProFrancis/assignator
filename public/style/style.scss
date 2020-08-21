@@ -31,6 +31,20 @@ main{
   padding: 20px;
   display: flex;
 }
+h1{
+  padding: 15px;
+  font-size: 1.5em;
+}
+
+h2,h3,h4{
+  font-size: 1.2em;
+}
+
+h2{
+  padding: 10px;
+  margin: 5px 0px;
+}
+
 h1,h2,h3,h4{
   text-align: center;
   text-transform: uppercase;
@@ -54,7 +68,7 @@ div, nav{
 }
 
 .iconeList2{
-  transform: translate(0px, -5px);
+  transform: translate(-25px, -5px);
 }
 
 .titleH1{
@@ -125,16 +139,6 @@ section{
   div{
     border-radius: 15px;
     background-color: $color-background-violet;
-  }
-  h1{
-    padding: 15px;
-    font-size: 22px;
-    font-weight: 300;
-  }  
-  h2{
-    padding: 10px;
-    font-size: 21px;
-    margin: 5px 0px;
   }
   p{
     line-height: 24px;
@@ -289,7 +293,7 @@ section{
     align-items: center;
     justify-content: center;
     img{
-      transform: translate(-10px, 0px);
+      transform: translate(-10px, -3px);
     }
   }
 }
