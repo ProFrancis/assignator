@@ -150,6 +150,9 @@ section{
       position: absolute;
       transform: translate(110px, -102px);
     }
+    .titleProject{
+      width: 32rem;
+    }
   }
   .showProject{
     width: 30rem;
@@ -243,6 +246,7 @@ section{
       display: flex;
       margin-bottom: 15px;
       justify-content: center;
+      width: 32rem;
     }
   }
 }

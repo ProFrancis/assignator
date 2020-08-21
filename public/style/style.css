@@ -171,6 +171,10 @@ section #showList li {
           transform: translate(110px, -102px);
 }
 
+#contenerHistory .contenerProject .titleProject {
+  width: 32rem;
+}
+
 #contenerHistory .showProject {
   width: 30rem;
   padding: 1rem;
@@ -289,6 +293,7 @@ section #showList li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 32rem;
 }
 
 #sectionForm {
