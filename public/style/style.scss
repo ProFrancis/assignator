@@ -196,58 +196,58 @@ section{
 
 #contenerAffiliate{
   margin-top: 91px;
+  // ezae
+  .showProject{
+    width: 30rem;
+    padding: 1rem;
+    margin: 1rem 0rem 1rem 0rem;
+    div {
+      border: none;
+    }
+    > div {
+      text-align: center;
+      background-color: #ffffff00;
+    }
+    .groupProject{
+      display: flex;
+      justify-content: space-between;
+      background-color: #ffffff00;
+      img {
+        width: 60px;
+        height: 60px;
+        // position: absolute;
+        // transform: translate(-130px, -25px);   
+      }
+      p{
+        // margin-left: 3.5rem;
+        // text-align: initial;
+      }
+      .date{
+        width: 45px;
+        height: 45px;
+        padding-top: 1rem;
+        // position: absolute;
+        // transform: translate(-85px, -3px);
+      }
+      .showUserGroup, .showDateProject{
+        width: 15rem;
+        background-color: #ffffff00;
+      }
+    }
+  }
+  // 
   div{
-    padding: 15px;
     border-radius: 15px;
     background-color: $color-background-violet;
   }
   #firstDiv{
-    width: 255px;
+    width: 22rem;
     display: flex;
-    padding-left: 15px;  
+    padding: 1rem;
+    text-align: center;
   }
   h3{
     padding: 15px 0px 0px 10px;
-  }
-  #showGroups{
-    border: none;
-    width: 566px;
-    padding-left: 0px;
-    background-color: #ffffff00;
-    img {
-      width: 50px;
-      height: 50px;
-      position: absolute;
-      transform: translate(0px, -25px);
-    }
-    p{
-      margin-left: 3.5rem;
-    }
-    .date{
-      margin: 0px;
-    }
-    > div {
-      margin-bottom: 10px;
-    }
-    > div > div, > div > div > div{
-      padding: 0px;
-      border-radius: 0px;
-      border: none;
-      background-color: #ffffff00;
-    }
-    > div > div {
-        display: flex;
-        justify-content: space-between;
-    }
-    p::first-letter { 
-      text-transform: uppercase;
-    }
-    .titleProject{
-      display: flex;
-      margin-bottom: 15px;
-      justify-content: center;
-      width: 32rem;
-    }
   }
 }
 

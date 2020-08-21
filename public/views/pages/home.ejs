@@ -82,20 +82,23 @@
         <img class="icones" src="/img/team1.png" alt="History Tech-watch" />
         <h3>The two next projects</h3>
       </div>
-      <div id="showGroups">
-        <% for (let project of projects) { %>
-          <div>
-            <div class="titleProject"><%= project.subject %></div>
-            <div>
-              <div>
-                <img src="/img/colleagues.png"> 
-                <p><%= project.group.join(" - ") %></p>
-              </div>
-              <div><p class="date">When : <%= project.deadline %></p></div>
+      <% for (let project of projects) { %>
+        <div class="showProject"> 
+          <div class="titleProjectName">
+            <%= project.subject %>
+          </div>
+          <div class="groupProject">
+            <div class="showUserGroup">
+              <img src="/img/colleagues.png"> 
+              <p><%= project.group.join(" - ") %></p>
+            </div>
+            <div class="showDateProject">
+              <img class="date" src="/img/calendar.png"> 
+              <p><%= project.deadline %></p>
             </div>
           </div>
-        <%}%>
-      </div>
+        </div>
+      <%}%>
     </section>
   </main>
 </body>

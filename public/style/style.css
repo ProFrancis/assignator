@@ -220,80 +220,63 @@ section #showList li {
   margin-top: 91px;
 }
 
-#contenerAffiliate div {
-  padding: 15px;
-  border-radius: 15px;
-  background-color: #25233cd6;
+#contenerAffiliate .showProject {
+  width: 30rem;
+  padding: 1rem;
+  margin: 1rem 0rem 1rem 0rem;
 }
 
-#contenerAffiliate #firstDiv {
-  width: 255px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 15px;
-}
-
-#contenerAffiliate h3 {
-  padding: 15px 0px 0px 10px;
-}
-
-#contenerAffiliate #showGroups {
+#contenerAffiliate .showProject div {
   border: none;
-  width: 566px;
-  padding-left: 0px;
+}
+
+#contenerAffiliate .showProject > div {
+  text-align: center;
   background-color: #ffffff00;
 }
 
-#contenerAffiliate #showGroups img {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  -webkit-transform: translate(0px, -25px);
-          transform: translate(0px, -25px);
-}
-
-#contenerAffiliate #showGroups p {
-  margin-left: 3.5rem;
-}
-
-#contenerAffiliate #showGroups .date {
-  margin: 0px;
-}
-
-#contenerAffiliate #showGroups > div {
-  margin-bottom: 10px;
-}
-
-#contenerAffiliate #showGroups > div > div, #contenerAffiliate #showGroups > div > div > div {
-  padding: 0px;
-  border-radius: 0px;
-  border: none;
-  background-color: #ffffff00;
-}
-
-#contenerAffiliate #showGroups > div > div {
+#contenerAffiliate .showProject .groupProject {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #ffffff00;
 }
 
-#contenerAffiliate #showGroups p::first-letter {
-  text-transform: uppercase;
+#contenerAffiliate .showProject .groupProject img {
+  width: 60px;
+  height: 60px;
 }
 
-#contenerAffiliate #showGroups .titleProject {
+#contenerAffiliate .showProject .groupProject .date {
+  width: 45px;
+  height: 45px;
+  padding-top: 1rem;
+}
+
+#contenerAffiliate .showProject .groupProject .showUserGroup, #contenerAffiliate .showProject .groupProject .showDateProject {
+  width: 15rem;
+  background-color: #ffffff00;
+}
+
+#contenerAffiliate div {
+  border-radius: 15px;
+  background-color: #25233cd6;
+}
+
+#contenerAffiliate #firstDiv {
+  width: 22rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 15px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 32rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+#contenerAffiliate h3 {
+  padding: 15px 0px 0px 10px;
 }
 
 #sectionForm {
