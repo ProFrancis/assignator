@@ -50,21 +50,31 @@
         <h1>Tech watch Assignator</h1>
       </div>
       <div id="contenerList">
-        <img style="margin-left: -140px;" class="icones" src="../../img/teamwork (1).png" alt="History Tech-watch" />
+        <img style="margin-left: -140px;" class="icones" src="../../img/project.png" alt="History Tech-watch" />
         <h3>Next Projects</h3>
       </div>
-      <div id="showList">
-        <% for (let project of projects) { %>
-          <%= project.subject %>
-          <%= project.deadline %>
-          <%= project.group.join(" - ") %>
-        <%}%>
-      </div>
+      <% for (let project of projects) { %>
+        <div class="showProject"> 
+          <div class="titleProjectName">
+            <%= project.subject %>
+          </div>
+          <div class="groupProject">
+            <div class="showUserGroup">
+              <img src="/img/colleagues.png"> 
+              <p><%= project.group.join(" - ") %></p>
+            </div>
+            <div class="showDateProject">
+              <img class="date" src="/img/calendar.png"> 
+              <p><%= project.deadline %></p>
+            </div>
+          </div>
+        </div>
+      <%}%>
     </section>
     <section id="contenerAffiliate">
       <img id="pompompurin" src="/gifs/gif.gif" alt="gif pompompurin" />
       <div id="firstDiv">
-          <img class="icones" src="../../img/teamwork (1).png" alt="History Tech-watch" />
+          <img class="icones" src="../../img/crowTeam.png" alt="History Tech-watch" />
           <h3>Add tech-watch</h3>
       </div>
       <section id="sectionForm">

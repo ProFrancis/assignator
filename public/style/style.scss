@@ -49,7 +49,7 @@ div, nav{
 }
 
 .icones{
-  width: 40px;
+  width: 50px;
   object-fit: contain;
 }
 .titleH1{
@@ -78,6 +78,45 @@ header{
 section{
   margin: 10px;
   margin-left: 20px;
+    // 
+    .showProject{
+      padding: 1rem;
+      margin: 1rem 0rem 1rem 0rem;
+      div {
+        border: none;
+      }
+      > div {
+        text-align: center;
+        background-color: #ffffff00;
+      }
+      .groupProject{
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff00;
+        img {
+          width: 60px;
+          height: 60px;
+          // position: absolute;
+          // transform: translate(-130px, -25px);   
+        }
+        p{
+          // margin-left: 3.5rem;
+          // text-align: initial;
+        }
+        .date{
+          width: 45px;
+          height: 45px;
+          padding-top: 1rem;
+          // position: absolute;
+          // transform: translate(-85px, -3px);
+        }
+        .showUserGroup, .showDateProject{
+          width: 15rem;
+          background-color: #ffffff00;
+        }
+      }
+    }
+    // 
   div{
     border-radius: 15px;
     background-color: $color-background-violet;
@@ -102,10 +141,12 @@ section{
       position: absolute;
       margin-left: 90px;
     }
+    
   }
   #contenerList{
-    padding: 15px 50px;
+    width: 32rem;
     margin-top: 20px;
+    padding: 15px 50px;
     text-align: center;
     h3{
       padding: 10px 30px;
@@ -172,19 +213,11 @@ section{
       img {
         width: 60px;
         height: 60px;
-        // position: absolute;
-        // transform: translate(-130px, -25px);   
-      }
-      p{
-        // margin-left: 3.5rem;
-        // text-align: initial;
       }
       .date{
         width: 45px;
         height: 45px;
         padding-top: 1rem;
-        // position: absolute;
-        // transform: translate(-85px, -3px);
       }
       .showUserGroup, .showDateProject{
         width: 15rem;
@@ -196,7 +229,7 @@ section{
 
 #contenerAffiliate{
   margin-top: 91px;
-  // ezae
+  // 
   .showProject{
     width: 30rem;
     padding: 1rem;
@@ -244,10 +277,11 @@ section{
     width: 22rem;
     display: flex;
     padding: 1rem;
-    text-align: center;
-  }
-  h3{
-    padding: 15px 0px 0px 10px;
+    align-items: center;
+    justify-content: center;
+    img{
+      transform: translate(-10px, 0px);
+    }
   }
 }
 
@@ -258,12 +292,13 @@ section{
     margin-bottom: 20px;
   }
   form{
+    padding: 1rem;
     display: flex;
-    width: 325px;
     flex-direction: column;
   }
   input{
     padding: 5px;
+    border-radius: 2px;
   }
   label{
     text-align: center;
@@ -272,8 +307,9 @@ section{
   }
   button{
     padding: 5px;
-    margin-top: 10px;
     cursor: pointer;
+    margin-top: 10px;
+    border-radius: 2px;
     text-align: center;
     text-transform: uppercase;
   }
