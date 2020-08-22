@@ -77,7 +77,7 @@ async function deleteStudent(element) {
 }
 
 api.delete("/students", function(req, res) {
-  deleteStudent(req.body.name);
+  await deleteStudent(req.body.name);
   res.send();
 })
 
@@ -152,7 +152,7 @@ api.post("/projects", async function(req, res) {
       group: await createGroup(parseInt(req.body.number))
   }
 
-  addProject(newProject);
+  await addProject(newProject);
   res.send();
 })
 
