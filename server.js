@@ -97,7 +97,7 @@ async function getPreviousProjects() {
     let dataProjects = await fetch("http://localhost:8080/projects");
     let projects = await dataProjects.json();
     let previous = projects.filter((project) => Date.parse(project.deadline) < Date.now());
-    previous = previous.sort((a, b) => Date.parse(a.deadline) - Date.parse(b.deadline));
+    previous = previous.sort((a, b) => Date.parse(b.deadline) - Date.parse(a.deadline));
     for (let project of previous) {
         project.deadline = convertDate(new Date(project.deadline));
     }
