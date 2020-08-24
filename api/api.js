@@ -76,7 +76,7 @@ async function deleteStudent(element) {
   }
 }
 
-api.delete("/students", function(req, res) {
+api.delete("/students", async function(req, res) {
   await deleteStudent(req.body.name);
   res.send();
 })
